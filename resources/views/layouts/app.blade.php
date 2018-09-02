@@ -1,58 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-@include('partials._head')
+<html lang="pt-br">
 
-<body class="nav-md" >
-<div class="container body">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <div class="main_container">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{--top nav--}}
-    @include('partials._sidenav')
-    {{--/topnav--}}
+        <title>Escriba online</title>
 
-    <!-- top navigation -->
-    @include('partials._topnav')
-    <!-- /top navigation -->
+        <!-- Bootstrap -->
+        <link href="{{ asset("css/bootstrap.min.css") }}"                   rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="{{ asset("css/font-awesome.min.css") }}"                rel="stylesheet">
 
-        <!-- page content -->
-        <div class="right_col" role="main" >
-            <div class="page-title">
-                <div class="title_left">
-                    <h3>@yield('title')</h3>
-                </div>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-                <div class="title_right">
-                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="data-pjax">
-                @yield('content')
+        <!-- Custom Theme Style -->
+        <link href="{{ asset("css/gentelella.min.css") }}"                  rel="stylesheet">
 
+        <!-- Automplete -->
+        <link href="{{ asset("autoComplete/auto-complete.css") }}"          rel="stylesheet" > 
+    
+        <!-- magic-check-master -->
+        <link href="{{ asset("css/magic-check.css") }}"                     rel="stylesheet">
+
+
+        {{-- ANIMATED --}}
+        <link href="{{ asset("css/animate.css") }}"                         rel="stylesheet">
+
+        <!-- SweetAlert2 -->
+        <link href="{{ asset("sweetalert2/dist/sweetalert2.min.css") }}"    rel="stylesheet" >
+
+        <!-- jasny (avatar) -->
+        {{-- <link href="{{ asset("jasny/css/jasny-bootstrap.min.css") }}"       rel="stylesheet" media="screen"> --}}
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+        
+
+
+        <!-- Select2 -->
+     {{--    <link rel="stylesheet" href="{{ asset("select2/css/select2.css") }}">
+        <link rel="stylesheet" href="{{ asset("select2/css/select2-bootstrap.css") }}>
+ --}}
+        
+
+             
+        {{-- CSS Customizado do Projeto --}}
+
+        <link  href="{{ asset('css/styles.css') }}" rel="stylesheet">
+
+
+        @stack('stylesheets')
+
+    </head>
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+
+                @include('includes/sidebar')
+
+                @include('includes/topbar')
+
+                @yield('conteudo')
+                
+                @include('includes.footer')
             </div>
         </div>
-        <!-- /page content -->
 
-        <!-- footer content -->
-    @include('partials._footer')
-    <!-- /footer content -->
-    </div>
-</div>
+        
 
+        <!-- jQuery -->
+        <script src="{{ asset("js/jquery.min.js") }}">                          </script>
+        <!-- Bootstrap -->
+        <script src="{{ asset("js/bootstrap.min.js") }}">                       </script>
+        <!-- Custom Theme Scripts -->
+        <script src="{{ asset("js/gentelella.min.js") }}">                      </script>
+        <!-- Autocomplete -->
+        <script src="{{ asset("autoComplete/auto-complete.min.js") }}" >        </script>
+        <!-- SweetAlert2 -->
+        <script src="{{ asset("sweetalert2/dist/sweetalert2.min.js") }}">       </script>
 
+        <!-- notify -->
+        {{-- <script src="{{ asset("js/notify.min.js") }}">                          </script> --}}
 
-<script src="{{asset('js/app.js')}}"></script>
-@include('partials._notification')
-@stack('scripts')
+        <!-- bootstrap-notify -->
+        <script src="{{ asset("bootstrap-notify/bootstrap-notify.min.js") }}">                          </script>
+        bootstrap-notify.min
 
+        <script src="{{ asset("inputmask/inputmask.js") }}">                    </script>
+        <script src="{{ asset("inputmask/inputmask.extensions.js") }}">         </script>
+        <script src="{{ asset("inputmask/inputmask.numeric.extensions.js") }}"> </script>
+        <script src="{{ asset("inputmask/inputmask.date.extensions.js") }}">    </script>
+        <script src="{{ asset("inputmask/inputmask.phone.extensions.js") }}">   </script>
+        <script src="{{ asset("inputmask/jquery.inputmask.js") }}">             </script>
+        <script src="{{ asset("inputmask/phone.js") }}">            </script>
+            
+        @stack('scripts')
 
-</body>
+    </body>
 </html>
+

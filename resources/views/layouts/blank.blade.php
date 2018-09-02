@@ -1,113 +1,107 @@
-	<!DOCTYPE html>
-	<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-		<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-			<!-- Meta, title, CSS, favicons, etc. -->
-			<meta charset="utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-			<title>Escriba online</title>
+        <title>Escriba online</title>
 
-			<!-- Bootstrap -->
-			<link href="{{ asset("css/bootstrap.min.css") }}"                   rel="stylesheet">
-			<!-- Font Awesome -->
-			<link href="{{ asset("css/font-awesome.min.css") }}"                rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="{{ asset("css/bootstrap.min.css") }}"                   rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="{{ asset("css/font-awesome.min.css") }}"                rel="stylesheet">
 
-			
-			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
-			<!-- Custom Theme Style -->
-			<link href="{{ asset("css/gentelella.min.css") }}"                  rel="stylesheet">
+        <!-- Custom Theme Style -->
+        <link href="{{ asset("css/gentelella.min.css") }}"                  rel="stylesheet">
 
-			<!-- Automplete -->
-			<link href="{{ asset("autoComplete/auto-complete.css") }}"          rel="stylesheet" > 
-		
-			<!-- magic-check-master -->
-			<link href="{{ asset("css/magic-check.css") }}"                     rel="stylesheet">
-
-
-			{{-- ANIMATED --}}
-			<link href="{{ asset("css/animate.css") }}"                         rel="stylesheet">
-
-			<!-- SweetAlert2 -->
-			<link href="{{ asset("sweetalert2/dist/sweetalert2.min.css") }}"    rel="stylesheet" >
-
-			<!-- jasny (avatar) -->
-			{{-- <link href="{{ asset("jasny/css/jasny-bootstrap.min.css") }}"       rel="stylesheet" media="screen"> --}}
-			<!-- Latest compiled and minified CSS -->
-			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
-			
+        <!-- Automplete -->
+        <link href="{{ asset("autoComplete/auto-complete.css") }}"          rel="stylesheet" > 
+    
+        <!-- magic-check-master -->
+        <link href="{{ asset("css/magic-check.css") }}"                     rel="stylesheet">
 
 
-			<!-- Select2 -->
-		{{--    <link rel="stylesheet" href="{{ asset("select2/css/select2.css") }}">
-			<link rel="stylesheet" href="{{ asset("select2/css/select2-bootstrap.css") }}>
-	--}}
-			
+        {{-- ANIMATED --}}
+        <link href="{{ asset("css/animate.css") }}"                         rel="stylesheet">
 
-					
-			{{-- CSS Customizado do Projeto --}}
+        <!-- SweetAlert2 -->
+        <link href="{{ asset("sweetalert2/dist/sweetalert2.min.css") }}"    rel="stylesheet" >
 
-			<link  href="{{ asset('css/styles.css') }}" rel="stylesheet">
-
-
-			@stack('stylesheets')
-
-		</head>
-
-		<body class="nav-md">
-			<div id="app">
-
-				<div class="container body">
-					<div class="main_container">
-
-							@include('includes/sidebar')
-
-							@include('includes/topbar')
-
-							@yield('conteudo')
-							
-							@include('includes.footer')
-					</div>
-				</div>
-			</div>
- 
-			<!-- vue -->
-			<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+        <!-- jasny (avatar) -->
+        {{-- <link href="{{ asset("jasny/css/jasny-bootstrap.min.css") }}"       rel="stylesheet" media="screen"> --}}
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+        
 
 
-			<!-- jQuery -->
-			<script src="{{ asset("js/jquery.min.js") }}">                          </script>
-			<!-- Bootstrap -->
-			<script src="{{ asset("js/bootstrap.min.js") }}">                       </script>
-			<!-- Custom Theme Scripts -->
-			<script src="{{ asset("js/gentelella.min.js") }}">                      </script>
-			<!-- Autocomplete -->
-			<script src="{{ asset("autoComplete/auto-complete.min.js") }}" >        </script>
-			<!-- SweetAlert2 -->
-			<script src="{{ asset("sweetalert2/dist/sweetalert2.min.js") }}">       </script>
+        <!-- Select2 -->
+     {{--    <link rel="stylesheet" href="{{ asset("select2/css/select2.css") }}">
+        <link rel="stylesheet" href="{{ asset("select2/css/select2-bootstrap.css") }}>
+ --}}
+        
 
-			<!-- notify -->
-			{{-- <script src="{{ asset("js/notify.min.js") }}">                          </script> --}}
+             
+        {{-- CSS Customizado do Projeto --}}
 
-			<!-- bootstrap-notify -->
-			<script src="{{ asset("bootstrap-notify/bootstrap-notify.min.js") }}">                          </script>
-			bootstrap-notify.min
+        <link  href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
-			<script src="{{ asset("inputmask/inputmask.js") }}">                    </script>
-			<script src="{{ asset("inputmask/inputmask.extensions.js") }}">         </script>
-			<script src="{{ asset("inputmask/inputmask.numeric.extensions.js") }}"> </script>
-			<script src="{{ asset("inputmask/inputmask.date.extensions.js") }}">    </script>
-			<script src="{{ asset("inputmask/inputmask.phone.extensions.js") }}">   </script>
-			<script src="{{ asset("inputmask/jquery.inputmask.js") }}">             </script>
-			<script src="{{ asset("inputmask/phone.js") }}">            </script>
-				
-			@stack('scripts')
 
-		</body>
-	</html>
+        @stack('stylesheets')
 
+    </head>
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+
+                @include('includes/sidebar')
+
+                @include('includes/topbar')
+
+                @yield('conteudo')
+                
+                @include('includes.footer')
+            </div>
+        </div>
+
+        
+
+        <!-- jQuery -->
+        <script src="{{ asset("js/jquery.min.js") }}">                          </script>
+        <!-- Bootstrap -->
+        <script src="{{ asset("js/bootstrap.min.js") }}">                       </script>
+        <!-- Custom Theme Scripts -->
+        <script src="{{ asset("js/gentelella.min.js") }}">                      </script>
+        <!-- Autocomplete -->
+        <script src="{{ asset("autoComplete/auto-complete.min.js") }}" >        </script>
+        <!-- SweetAlert2 -->
+        <script src="{{ asset("sweetalert2/dist/sweetalert2.min.js") }}">       </script>
+
+        <!-- notify -->
+        {{-- <script src="{{ asset("js/notify.min.js") }}">                          </script> --}}
+
+        <!-- bootstrap-notify -->
+        <script src="{{ asset("bootstrap-notify/bootstrap-notify.min.js") }}">                          </script>
+        bootstrap-notify.min
+
+        <script src="{{ asset("inputmask/inputmask.js") }}">                    </script>
+        <script src="{{ asset("inputmask/inputmask.extensions.js") }}">         </script>
+        <script src="{{ asset("inputmask/inputmask.numeric.extensions.js") }}"> </script>
+        <script src="{{ asset("inputmask/inputmask.date.extensions.js") }}">    </script>
+        <script src="{{ asset("inputmask/inputmask.phone.extensions.js") }}">   </script>
+        <script src="{{ asset("inputmask/jquery.inputmask.js") }}">             </script>
+        <script src="{{ asset("inputmask/phone.js") }}">            </script>
+            
+        @stack('scripts')
+
+    </body>
+</html>
 

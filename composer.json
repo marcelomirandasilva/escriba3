@@ -6,13 +6,15 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "creativeorange/gravatar": "~1.0",
+        "cviebrock/eloquent-sluggable": "^4.2",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0",
-        "cviebrock/eloquent-sluggable": "^4.2",
         "laravel/scout": "^3.0",
+        "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.5",
         "prettus/l5-repository": "^2.6",
+        "thomaswelton/laravel-gravatar": "^1.1",
         "zizaco/entrust": "^1.8"
     },
     "require-dev": {
@@ -25,6 +27,9 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files": [
+            "app/Bibliotecas/Geral.php" 
         ],
         "psr-4": {
             "App\\": "app/"
